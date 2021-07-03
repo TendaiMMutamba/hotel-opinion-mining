@@ -1,0 +1,8 @@
+Flask== 1.1.2
+gunicorn== 19.9.0
+Jinja2==2.10.1
+Werkzeug== 2.0.1
+numpy >= 1.9.2
+keras == 2.2.4
+keras-applications == 1.0.8
+tensorflow-cpu >= 2.0.0
