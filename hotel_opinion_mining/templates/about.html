@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/all.css')}}" >
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+    <title>The Victoria Falls Hotel</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+        <div class="container">
+                <h1 class="logo"><a href="{{url_for('index') }}">The Victoria Falls Hotel</a></h1>
+                <ul>
+                    <li><a  href="{{url_for('index')}}">Home</a></li>
+                    <li><a class="current" href="{{url_for('about')}}">About Us</a></li>
+                    <li><a href="{{url_for('contact') }}">Contact Us</a></li>
+                </ul>
+              </div>
+            </nav>  
+    </header>
+   <section id="about-info" class="bg-light py-3">
+       <div class="container">
+           <div class="info-left">
+               <h1 class="l-heading"> <span class="text-primary">About</span> our Hotel </h1>
+               <p> 
+                It may look like the city of a lost civilisation but the Kingdom Hotel is one of Victoria Falls best known family hotels. Expect all the comforts of a modern resort geared up in every way for your maximum comfort and enjoyment.
+                The Kingdom Hotel has become a firm favourite with families, groups and individual travellers who are looking for a quality yet affordable Victoria Falls Hotel option. The hotel is centrally located within the small resort town of Victoria Falls, Zimbabwe, c
+                lose to all the major attractions including the entrance to the Victoria Falls rainforest which is a short walk away.
+               </p>
+           </div>
+           <div class="info-right">
+               <img src="{{url_for('static', filename = 'img/photo-2.jpg') }}" alt="Hotel">
+           </div>
+       </div>
+   </section>
+   <div class="clr"></div>
+
+   <section id="testimonials" class="py-3">
+    <div class="container">
+       <h2 class="l-heading ">What our guests say</h2>
+       <div class="testimonial bg-primary">
+           <img src="{{url_for('static', filename = 'img/person-1.jpg') }}" alt="Person 1">
+           <p>They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn’t wanna wait.
+            So this was a big plus. The sevice was exceptional as well. Would definitely send a friend there. </p>
+
+       </div>
+
+       <div class="testimonial bg-primary">
+        <img src="{{url_for('static', filename = 'img/person-2.jpg') }}" alt="Person 2">
+        <p>The best hotel I’ve ever been privileged enough to stay at. Gorgeous building, and it only gets more breathtaking when you walk in. 
+            High quality rooms (there was even a tv by the shower),
+             and high quality service. Also, they are one of few hotels that allow people under 21 to book a reservation.</p>
+        </div>
+        {%if positive %}
+        <div class="testimonial bg-primary">
+            <img src="{{url_for('static', filename = 'img/person-3.jpg') }}" alt="Person 3">
+                <p>{{message }}</p>
+
+        </div>
+        {% endif %}
+        
+
+    </div>
+   </div>
+  </section>
+</body>
+</html>
