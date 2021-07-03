@@ -60,7 +60,7 @@ def sentiment_analysis():
             from email.message import EmailMessage
     
             source_email = "hotelopiniominingproject@gmail.com" #senders Gmail id over here
-            password = "ot3lopiniominingproj3ct" #senders Gmail's Password over here 
+            password = "hot3lopiniominingproj3ct" #senders Gmail's Password over here 
             msg = EmailMessage()
             msg['Subject'] = 'Negative Hotel Review'  # Subject of Email
             msg['From'] = source_email
