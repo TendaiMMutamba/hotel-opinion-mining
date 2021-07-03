@@ -10,7 +10,6 @@ from tensorflow import keras
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 physical_devices = tf.config.list_physical_devices('GPU') 
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 with open('tokenizer.pickle' , 'rb') as pickle_file:
     tokenizer = pickle.load(pickle_file)
@@ -60,12 +59,12 @@ def sentiment_analysis():
             import smtplib 
             from email.message import EmailMessage
     
-            source_email = "" #senders Gmail id over here
-            password = "" #senders Gmail's Password over here 
+            source_email = "hotelopiniominingproject@gmail.com" #senders Gmail id over here
+            password = "ot3lopiniominingproj3ct" #senders Gmail's Password over here 
             msg = EmailMessage()
             msg['Subject'] = 'Negative Hotel Review'  # Subject of Email
             msg['From'] = source_email
-            msg['To'] = ''
+            msg['To'] = 'tendaimutamba10@gmail.com'
             email_body = "A negative review has been entered by "+name+ " with email address " +email+" and text "+message
             msg.set_content(email_body) # Email body or Content
             
